@@ -1,0 +1,7 @@
+.cache
+.local
+.vscode
+.python_history
+.bash_history
+data/
+runs/

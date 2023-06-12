@@ -1,0 +1,14 @@
+# path to train.txt or test.txt
+path: ./data/cmupanoptic-640x640/
+train: ./data/cmupanoptic-640x640/train.txt
+val: ./data/cmupanoptic-640x640/val.txt
+
+train_annotations: annotations/coco_style_sampled_train.json
+val_annotations: annotations/coco_style_sampled_val.json
+
+# number of classes (only one class: head)
+nc: 1
+# number of Euler angles is 3 (pitch, yaw, roll)
+num_angles: 3
+# class names
+names: ['head']
