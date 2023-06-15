@@ -660,7 +660,8 @@ if __name__ == '__main__':
                 'mosaic': (1, 0.0, 1.0),  # image mixup (probability)
                 'mixup': (1, 0.0, 1.0),   # image mixup (probability)
                 'copy_paste': (1, 0.0, 1.0),  # segment copy-paste (probability)
-                'paste_in': (1, 0.0, 1.0)}    # segment copy-paste (probability)
+                'paste_in': (1, 0.0, 1.0),    # segment copy-paste (probability)
+                'loss_ota': (1, 0, 1)} # adding loss_ota in the mutation compute, evolve will fail without this
 
         with open(opt.hyp, errors='ignore') as f:
             hyp = yaml.safe_load(f)  # load hyps dict
