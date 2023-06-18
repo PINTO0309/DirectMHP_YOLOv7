@@ -29,9 +29,9 @@ $ python train.py \
  1199/1199     14.5G   0.01066  0.004235         0   0.01346       409       640
                Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95
                  all       16216       32738       0.992       0.978       0.994       0.784
-left bbox number: 31935 / 32738; MAE: 7.9602, [pitch_error, yaw_error, roll_error]: 8.8929, 7.2529, 7.7348
-left backward bbox number: 16067 / 31935; MAE: 8.6401, [pitch_error, yaw_error, roll_error]: 9.3878, 8.3266, 8.2057
-left frontal bbox number: 15868 / 31935; MAE: 7.2718, [pitch_error, yaw_error, roll_error]: 8.3917, 6.1657, 7.2581
+left bbox number: 31935 / 32738; MAE: 7.9602, [pitch_err, yaw_err, roll_err]: 8.8929, 7.2529, 7.7348
+left backward bbox number: 16067 / 31935; MAE: 8.6401, [pitch_err, yaw_err, roll_err]: 9.3878, 8.3266, 8.2057
+left frontal bbox number: 15868 / 31935; MAE: 7.2718, [pitch_err, yaw_err, roll_err]: 8.3917, 6.1657, 7.2581
 ```
 
 ## 2. ONNX export
