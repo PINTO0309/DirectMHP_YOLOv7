@@ -8,14 +8,40 @@ I just replaced the DirectMHP backend from YOLOv5 to YOLOv7. The reason is that 
 # Data preparation
 
 # Results
-## 1. YOLOv7-tiny + CMU-Panoptic 300 epoch
+## 1. YOLOv7-tiny + CMU-Panoptic 5000 epoch
+## RTX3080: 16GB
 ```
-  Epoch   gpu_mem       box       obj       cls     total    labels  img_size
-299/299     37.5G   0.01288  0.004909         0   0.01878       251       640
-            Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95
-              all       16216       32738       0.988       0.974       0.993       0.793
+$ python train.py \
+--workers 8 \
+--device 0 \
+--epochs 5000 \
+--batch-size 96 \
+--data data/cmu_panoptic_coco.yaml \
+--img-size 640 640 \
+--cfg cfg/training/yolov7-tiny_cmupanoptic_head.yaml \
+--weights 'yolov7-tiny.pt' \
+--name yolov7_tiny \
+--hyp data/hyp.scratch.tiny.yaml \
+--mse_conf_thre 0.40 \
+--mse_loss_w 0.10
 
-left box num: 31938 / 32738; MAE: 8.5607, [pitch, yaw, roll]: 9.4997, 7.9325, 8.2497
-left backward box num: 16100 / 31938; MAE: 9.2062, [pitch, yaw, roll]: 10.091, 8.9266, 8.6009
-left frontal box num: 15838 / 31938; MAE: 7.9045, [pitch, yaw, roll]: 8.8988, 6.9219, 7.8927
+     Epoch   gpu_mem       box       obj       cls     total    labels  img_size
+ 1199/1199     14.5G   0.01066  0.004235         0   0.01346       409       640
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95
+                 all       16216       32738       0.992       0.978       0.994       0.784
+left bbox number: 31935 / 32738; MAE: 7.9602, [pitch_error, yaw_error, roll_error]: 8.8929, 7.2529, 7.7348
+left backward bbox number: 16067 / 31935; MAE: 8.6401, [pitch_error, yaw_error, roll_error]: 9.3878, 8.3266, 8.2057
+left frontal bbox number: 15868 / 31935; MAE: 7.2718, [pitch_error, yaw_error, roll_error]: 8.3917, 6.1657, 7.2581
+```
+
+## 2. ONNX export
+```
+python export.py \
+--weights runs/train/last.pt \
+--img-size 480 640 \
+--grid
+
+onnxsim runs/train/last.onnx runs/train/last.onnx
+onnxsim runs/train/last.onnx runs/train/last.onnx
+onnxsim runs/train/last.onnx runs/train/last.onnx
 ```
