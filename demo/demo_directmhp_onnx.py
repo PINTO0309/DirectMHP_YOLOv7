@@ -371,6 +371,9 @@ def main(args):
         # ============================================================= DirectMHP
         # face_boxes: [N, [x_min, y_min, x_max, y_max, yaw, pitch, roll, score]]
         face_boxes: Iterable[Box] = directmhp_head(frame)
+
+        time_txt = f'{(time.time()-start)*1000:.2f} ms (inference+post-process)'
+
         canvas = copy.deepcopy(frame)
 
         for face_box in face_boxes:
@@ -430,7 +433,6 @@ def main(args):
                 1
             )
 
-        time_txt = f'{(time.time()-start)*1000:.2f} ms (inference+post-process)'
         cv2.putText(
             canvas,
             time_txt,
