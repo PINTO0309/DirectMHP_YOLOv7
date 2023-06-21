@@ -299,7 +299,7 @@ def draw_axis(img, yaw, pitch, roll, tdx=None, tdy=None, size=100):
     if math.isnan(yaw) or math.isnan(pitch) or math.isnan(roll):
         return img
     pitch = pitch * np.pi / 180
-    yaw = -(yaw * np.pi / 180)
+    yaw = yaw * np.pi / 180
     roll = roll * np.pi / 180
     if tdx != None and tdy != None:
         tdx = tdx
@@ -361,6 +361,12 @@ def main(args):
     )
 
     print('')
+
+    # warmup
+    directmhp_head(np.zeros([480,640,3], dtype=np.uint8))
+    directmhp_head(np.zeros([480,640,3], dtype=np.uint8))
+    directmhp_head(np.zeros([480,640,3], dtype=np.uint8))
+
     while True:
         ret, frame = cap.read()
         if not ret:
