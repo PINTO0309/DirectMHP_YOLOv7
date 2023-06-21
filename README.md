@@ -5,7 +5,7 @@ I just replaced the DirectMHP backend from YOLOv5 to YOLOv7. The reason is that 
 1. https://github.com/hnuzhy/DirectMHP
 2. https://github.com/WongKinYiu/yolov7
 
-![image](https://github.com/PINTO0309/DirectMHP_YOLOv7/assets/33194443/49687e96-d158-4148-9f86-af507455cfd4)
+![20230621213710](https://github.com/PINTO0309/DirectMHP_YOLOv7/assets/33194443/aff0c1dd-9808-46e1-b8f7-12b040a52b60)
 
 ![image](https://github.com/PINTO0309/DirectMHP_YOLOv7/assets/33194443/7e1aeaf9-6836-431e-9321-0bf4c2902540)
 
