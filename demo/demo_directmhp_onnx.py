@@ -299,7 +299,7 @@ def draw_axis(img, yaw, pitch, roll, tdx=None, tdy=None, size=100):
     if math.isnan(yaw) or math.isnan(pitch) or math.isnan(roll):
         return img
     pitch = pitch * np.pi / 180
-    yaw = yaw * np.pi / 180
+    yaw = -(yaw * np.pi / 180)
     roll = roll * np.pi / 180
     if tdx != None and tdy != None:
         tdx = tdx
@@ -333,7 +333,7 @@ def main(args):
     directmhp_head = \
         DirectMHPONNX(
             model_file_path=model_file_path,
-            class_score_th=0.35,
+            class_score_th=0.45,
             cpu_mode=cpu_mode,
             cuda_mode=cuda_mode,
             tensorrt_mode=tensorrt_mode,
@@ -484,7 +484,7 @@ if __name__ == "__main__":
     parser.add_argument(
         '--model_file_path',
         type=str,
-        default='directmhp_cmu_yolov7_tiny_post_480x640.onnx',
+        default='directmhp_cmu_yolov7_post_480x640_epoch_0596_map0.806_mae7.571.onnx',
     )
     parser.add_argument(
         '--cpu',
