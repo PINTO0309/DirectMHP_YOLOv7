@@ -90,6 +90,13 @@ onnxsim runs/train/last.onnx runs/train/last.onnx
 ## 4. Citation
 
 ```
+@article{wang2022yolov7,
+  title={{YOLOv7}: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors},
+  author={Wang, Chien-Yao and Bochkovskiy, Alexey and Liao, Hong-Yuan Mark},
+  journal={arXiv preprint arXiv:2207.02696},
+  year={2022}
+}
+
 @article{zhou2023directmhp,
   title={DirectMHP: Direct 2D Multi-Person Head Pose Estimation with Full-range Angles},
   author={Zhou, Huayi and Jiang, Fei and Lu, Hongtao},
