@@ -257,3 +257,7 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+post_process_gen_tools/saved_model_postprocess
+*.engine
+*.profile
