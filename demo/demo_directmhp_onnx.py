@@ -333,7 +333,7 @@ def main(args):
     directmhp_head = \
         DirectMHPONNX(
             model_file_path=model_file_path,
-            class_score_th=0.20,
+            class_score_th=0.35,
             cpu_mode=cpu_mode,
             cuda_mode=cuda_mode,
             tensorrt_mode=tensorrt_mode,
