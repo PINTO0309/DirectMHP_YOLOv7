@@ -87,3 +87,13 @@ onnxsim runs/train/last.onnx runs/train/last.onnx
 ```
 ![image](https://github.com/PINTO0309/DirectMHP_YOLOv7/assets/33194443/f354b20a-1442-4672-b7f4-8bdc658865bb)
 
+## 4. Citation
+
+```
+@article{zhou2023directmhp,
+  title={DirectMHP: Direct 2D Multi-Person Head Pose Estimation with Full-range Angles},
+  author={Zhou, Huayi and Jiang, Fei and Lu, Hongtao},
+  journal={arXiv preprint arXiv:2302.01110},
+  year={2023}
+}
+```
