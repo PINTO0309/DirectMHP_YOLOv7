@@ -74,4 +74,5 @@ onnxsim runs/train/last.onnx runs/train/last.onnx
 onnxsim runs/train/last.onnx runs/train/last.onnx
 onnxsim runs/train/last.onnx runs/train/last.onnx
 ```
-![image](https://github.com/PINTO0309/DirectMHP_YOLOv7/assets/33194443/536e708e-760c-45db-a741-6531234d72a2)
+![image](https://github.com/PINTO0309/DirectMHP_YOLOv7/assets/33194443/f354b20a-1442-4672-b7f4-8bdc658865bb)
+
